@@ -117,20 +117,20 @@ package
 		
 		public function GenerateKey() : String
 		{
-		 var _loc5_:int = 0;
-         var _loc6_:String = null;
-         var _loc1_:String = new String();
-		 for (var _loc2_:* = 0; _loc2_ < 128; _loc2_++)
-         {
-            _loc5_ = Math.random() * 256;
-            _loc6_ = _loc5_.toString(16);
-            if(_loc6_.length == 1)
-            {
-               _loc6_ = "0" + _loc6_;
-            }
-            _loc1_ = _loc1_ + _loc6_;
-            _loc2_++;
-         }
+			var _loc5_:int = 0;
+			var _loc6_:String = null;
+			var _loc1_:String = new String();
+			for (var _loc2_:* = 0; _loc2_ < 128; _loc2_++)
+			{
+				_loc5_ = Math.random() * 256;
+				_loc6_ = _loc5_.toString(16);
+				if (_loc6_.length == 1)
+				{
+					_loc6_ = "0" + _loc6_;
+				}
+				_loc1_ = _loc1_ + _loc6_;
+				_loc2_++;
+			}
          privateKey = new BigInteger(_loc1_,16);
          var _loc3_:BigInteger = ENC_BASE_GENERATOR.modPow(privateKey, ENC_PRIME_MODULUS);
 		 
@@ -146,7 +146,5 @@ package
 			currentEncodeAlgorithm = null;
 			encoder = null;
 		}
-		
 	}
-
 }
