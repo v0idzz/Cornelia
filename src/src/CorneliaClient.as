@@ -131,10 +131,10 @@ package
 				_loc1_ = _loc1_ + _loc6_;
 				_loc2_++;
 			}
-		privateKey = new BigInteger(_loc1_,16);
-		var _loc3_:BigInteger = ENC_BASE_GENERATOR.modPow(privateKey, ENC_PRIME_MODULUS);
+			privateKey = new BigInteger(_loc1_,16);
+			var _loc3_:BigInteger = ENC_BASE_GENERATOR.modPow(privateKey, ENC_PRIME_MODULUS);
 		 
-		 return Base64.encode(_loc3_.toByteArray());
+			return Base64.encode(_loc3_.toByteArray());
 		 
 		}
 		
