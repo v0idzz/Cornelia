@@ -11,9 +11,9 @@ package
 	import flash.external.ExternalInterface;
 	import com.hurlant.crypto.prng.ARC4;
 	import com.hurlant.crypto.rsa.RSAKey;
-    import flash.display.*;
-    import flash.events.*;
-    import flash.utils.*;
+	import flash.display.*;
+	import flash.events.*;
+	import flash.utils.*;
 	
 	public class CorneliaClient 
 	{
@@ -131,8 +131,8 @@ package
 				_loc1_ = _loc1_ + _loc6_;
 				_loc2_++;
 			}
-         privateKey = new BigInteger(_loc1_,16);
-         var _loc3_:BigInteger = ENC_BASE_GENERATOR.modPow(privateKey, ENC_PRIME_MODULUS);
+		privateKey = new BigInteger(_loc1_,16);
+		var _loc3_:BigInteger = ENC_BASE_GENERATOR.modPow(privateKey, ENC_PRIME_MODULUS);
 		 
 		 return Base64.encode(_loc3_.toByteArray());
 		 
